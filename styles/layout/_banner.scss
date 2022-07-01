@@ -1,0 +1,17 @@
+.banner{
+    margin: 32px 0;
+    @include atMedium{
+        margin: 64px 0;
+    }
+    &__title{
+        margin: 12px 0;
+    }
+    &__intro{
+        font-size: 1.2rem;
+    }
+    &__subtitle{
+        color: $text-dim;
+    }
+}
+
+// 3.25rem

@@ -1,0 +1,22 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    font-size: 1rem;
+    position:sticky;
+    background: #fff;
+    box-shadow: 0px -5px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.site-title{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+nav{
+    display: flex;
+    a{
+        margin: 0 .5rem;
+    }
+}

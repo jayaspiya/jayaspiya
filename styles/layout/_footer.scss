@@ -1,0 +1,16 @@
+footer{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $highlight-color;
+    p{
+        font-weight: 700;
+    }
+    .footer_social{
+        a{
+            font-size: 1.2rem;
+            margin: 0 .2rem;
+        }
+    }
+}
