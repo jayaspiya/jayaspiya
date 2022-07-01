@@ -8,14 +8,11 @@
     
     & > div{
         width: 100%;
-        padding: 1rem;
         @include atMedium{
+            padding: 1rem;
             width: 50%;
         }
     }
-    // &__detail{
-    //     background: red;
-    // }
 
     &__item{
         display: flex;
@@ -31,6 +28,7 @@
             font-weight: 700;
         }
     }
+
     &__items{
         margin: 2rem 0 ;
     }

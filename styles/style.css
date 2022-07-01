@@ -13,7 +13,8 @@ a {
 }
 
 .wrapper {
-  padding: 0 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   margin: auto;
 }
 
@@ -84,11 +85,11 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 4rem;
   font-size: 1rem;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  height: 4rem;
   background: #fff;
   -webkit-box-shadow: 0px -5px 10px 5px rgba(0, 0, 0, 0.1);
           box-shadow: 0px -5px 10px 5px rgba(0, 0, 0, 0.1);
@@ -104,10 +105,54 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 
 nav a {
   margin: 0 .5rem;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.toggle .line1 {
+  -webkit-transform: rotate(-45deg) translate(-3px, 3px);
+          transform: rotate(-45deg) translate(-3px, 3px);
+}
+
+.toggle .line2 {
+  -webkit-transform: rotate(45deg) translate(-3px, -3px);
+          transform: rotate(45deg) translate(-3px, -3px);
+}
+
+.header__responsive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 footer {
@@ -180,11 +225,11 @@ footer .footer_social a {
 
 .contact > div {
   width: 100%;
-  padding: 1rem;
 }
 
 @media (min-width: 800px) {
   .contact > div {
+    padding: 1rem;
     width: 50%;
   }
 }
