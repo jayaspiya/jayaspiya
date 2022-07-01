@@ -1,0 +1,46 @@
+.contact{
+    display: flex;
+    
+    & > div{
+        width: 50%;
+        padding: 1rem;
+    }
+    // &__detail{
+    //     background: red;
+    // }
+
+    &__item{
+        display: flex;
+        margin: 1rem 0;
+        i{
+            margin: auto 0;
+            padding: 5px;
+            text-align: center;
+            color: $highlight-color;
+            padding-right: 20px;
+        }
+        .title{
+            font-weight: 700;
+        }
+    }
+    &__items{
+        margin: 2rem 0 ;
+    }
+    input, textarea{
+        height: 100%;
+        width: 80%;
+        border: 1px solid lightgray;
+        border-radius: 6px;
+        outline: none;
+        padding: .5rem;
+        font-size: 1.1rem;
+        margin: .4rem 0;
+    }
+    button{
+        background: $highlight-color;
+        color: #fff;
+        padding: 8px 16px;      
+        font-size: 1.1rem;
+        border-radius: 3px;
+    }
+}
