@@ -83,6 +83,12 @@ body {
   z-index: -1;
 }
 
+.udline {
+  border-bottom: 2px dotted #07293a;
+  color: #07293a;
+  font-weight: 600;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -291,6 +297,31 @@ footer ul li:nth-child(4) a:before {
 
 .project {
   margin: 20px 0;
+}
+
+.project__subtitle {
+  font-size: 1.1rem;
+  color: #4A4A4A;
+  font-weight: 600;
+  -webkit-text-decoration: double;
+          text-decoration: double;
+}
+
+.project__description {
+  text-align: justify;
+}
+
+.project__links {
+  margin: 10px 0;
+}
+
+.project__links a {
+  color: #167aad;
+  margin: 6px 0;
+  padding-right: 15px;
+  font-weight: 600;
+  font-size: .9rem;
+  border-radius: 3px;
 }
 
 .contact {
