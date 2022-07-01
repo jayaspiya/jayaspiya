@@ -24,12 +24,15 @@ footer{
         text-align: center;
         line-height: 2rem;
         font-size: 1rem;
-        margin: 0 10px;
+        margin: 0 4px;
         display: block;
         border-radius: 50%;
         position: relative;
         overflow: hidden;
         border: 3px solid #fff;
+        @include atMedium{
+            margin: 0 10px;
+        }
       }
 
     ul li a:hover .icon {
