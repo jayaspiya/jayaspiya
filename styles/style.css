@@ -56,6 +56,24 @@ body {
   }
 }
 
+.htitle {
+  position: relative;
+}
+
+.htitle::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 0px;
+  bottom: 0px;
+  left: -10px;
+  background-image: url("../../assets/polkadot-bg.png");
+  background-repeat: no-repeat;
+  background-size: 134px auto;
+  opacity: 0.3;
+  z-index: -1;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -70,9 +88,11 @@ header {
   font-size: 1rem;
   position: -webkit-sticky;
   position: sticky;
+  top: 0;
   background: #fff;
   -webkit-box-shadow: 0px -5px 10px 5px rgba(0, 0, 0, 0.1);
           box-shadow: 0px -5px 10px 5px rgba(0, 0, 0, 0.1);
+  z-index: 2;
 }
 
 .site-title {
@@ -143,11 +163,30 @@ footer .footer_social a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 800px) {
+  .contact {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .contact > div {
-  width: 50%;
+  width: 100%;
   padding: 1rem;
+}
+
+@media (min-width: 800px) {
+  .contact > div {
+    width: 50%;
+  }
 }
 
 .contact__item {
@@ -175,7 +214,7 @@ footer .footer_social a {
 
 .contact input, .contact textarea {
   height: 100%;
-  width: 80%;
+  width: 100%;
   border: 1px solid lightgray;
   border-radius: 6px;
   outline: none;
@@ -184,8 +223,14 @@ footer .footer_social a {
   margin: .4rem 0;
 }
 
+@media (min-width: 800px) {
+  .contact input, .contact textarea {
+    width: 90%;
+  }
+}
+
 .contact button {
-  background: #07293a;
+  background: #167aad;
   color: #fff;
   padding: 8px 16px;
   font-size: 1.1rem;

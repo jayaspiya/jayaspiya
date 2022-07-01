@@ -44,3 +44,20 @@ body{
         margin: 64px 0;
     }
 }
+
+.htitle{
+    position: relative;
+}
+.htitle::before{
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: 0px;
+    bottom: 0px;
+    left: -10px;
+    background-image: url('../../assets/polkadot-bg.png');
+    background-repeat: no-repeat;
+    background-size: 134px auto;
+    opacity: 0.3;
+    z-index: -1;
+}

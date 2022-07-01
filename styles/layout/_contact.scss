@@ -1,9 +1,17 @@
 .contact{
     display: flex;
+    flex-direction: column;
+
+    @include atMedium{
+        flex-direction: row;
+    }
     
     & > div{
-        width: 50%;
+        width: 100%;
         padding: 1rem;
+        @include atMedium{
+            width: 50%;
+        }
     }
     // &__detail{
     //     background: red;
@@ -28,16 +36,19 @@
     }
     input, textarea{
         height: 100%;
-        width: 80%;
+        width: 100%;
         border: 1px solid lightgray;
         border-radius: 6px;
         outline: none;
         padding: .5rem;
         font-size: 1.1rem;
         margin: .4rem 0;
+        @include atMedium{
+            width: 90%;
+        }
     }
     button{
-        background: $highlight-color;
+        background: $primary;
         color: #fff;
         padding: 8px 16px;      
         font-size: 1.1rem;
