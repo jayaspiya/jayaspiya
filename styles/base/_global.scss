@@ -12,7 +12,8 @@ a {
 }
 
 .wrapper{
-    padding: 0 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     @include atMedium{
         padding: 0 4rem;
     }
