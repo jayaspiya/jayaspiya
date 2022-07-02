@@ -1,13 +1,16 @@
 .project{
     margin: 20px 0;
     &__subtitle{
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         color: #4A4A4A;
         font-weight: 600;
         text-decoration: double;
     }
     &__description{
         text-align: justify;
+        @include atMedium{
+            font-size: 1.1rem;
+        }
     }
     &__links{
         margin: 10px 0; 

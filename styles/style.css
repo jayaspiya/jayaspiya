@@ -306,7 +306,7 @@ footer ul li:nth-child(4) a:before {
 }
 
 .project__subtitle {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #4A4A4A;
   font-weight: 600;
   -webkit-text-decoration: double;
@@ -315,6 +315,12 @@ footer ul li:nth-child(4) a:before {
 
 .project__description {
   text-align: justify;
+}
+
+@media (min-width: 800px) {
+  .project__description {
+    font-size: 1.1rem;
+  }
 }
 
 .project__links {
