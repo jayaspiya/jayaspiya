@@ -20,6 +20,14 @@ h1{
     }
 }
 
+h2{
+    font-size: 1.5rem;
+}
+
+h3{
+    font-size: 1.1rem;
+}
+
 a {
     color: $primary;
     text-decoration: inherit;
@@ -29,9 +37,12 @@ a {
     }
 }
 
-li{
-    list-style: square;
-    list-style-position: inside;
+ul{
+    margin: 0 1rem;
+    li{
+        list-style: square;
+        list-style-position: inside;
+    }
 }
 
 section{
