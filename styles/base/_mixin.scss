@@ -14,3 +14,14 @@
     @content;
   }
 }
+
+@mixin wrapper{
+  padding-left: 1rem;
+  padding-right: 1rem;
+  @include atMedium{
+      padding: 0 4rem;
+  }
+  @include atLarge{
+      padding: 0 10rem;
+  }
+}

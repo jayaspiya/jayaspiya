@@ -6,21 +6,10 @@
     box-sizing: border-box;
 }
 
-a {
-    color: inherit;
-    text-decoration: inherit;
-}
-
-.wrapper{
-    padding-left: 1rem;
-    padding-right: 1rem;
-    @include atMedium{
-        padding: 0 4rem;
-    }
-    @include atLarge{
-        padding: 0 10rem;
-    }
-    margin: auto;
+body{
+    color: $text-color;
+    font-family: Outfit,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+    background-color: $background-color;
 }
 
 h1{
@@ -31,47 +20,57 @@ h1{
     }
 }
 
-button{
-    background: $primary;
-    color: #fff;
-    padding: 8px 16px;      
-    font-size: 1.1rem;
-    border-radius: 3px;
-}
-
-
-body{
-    color: $text-color;
-    font-family: Outfit,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
-    background-color: $background-color;
-}
-
-.section-margin{
-    margin: 32px 0;
-    @include atMedium{
-        margin: 64px 0;
+a {
+    color: $primary;
+    text-decoration: inherit;
+    transition: all .3s;
+    &:hover{
+        text-decoration-line: underline;
     }
 }
 
-.htitle{
-    position: relative;
-}
-.htitle::before{
-    content: "";
-    position: absolute;
-    top: -5px;
-    right: 0px;
-    bottom: 0px;
-    left: -10px;
-    background-image: url('../../assets/polkadot-bg.png');
-    background-repeat: no-repeat;
-    background-size: 134px auto;
-    opacity: 0.3;
-    z-index: -1;
+li{
+    list-style: square;
+    list-style-position: inside;
 }
 
-.udline{
-    border-bottom: 2px dotted $highlight-color;
-    color: $highlight-color;
-    font-weight: 600;
+section{
+    @include wrapper;
+    
+    &:not(:first-of-type) {
+        h1{
+            position: relative;
+            margin-bottom: 1rem;
+        }
+        h1::before{
+            content: "";
+            position: absolute;
+            top: -5px;
+            right: 0px;
+            bottom: 0px;
+            left: -10px;
+            background-image: url('../../assets/polkadot-bg.png');
+            background-repeat: no-repeat;
+            background-size: 134px auto;
+            opacity: 0.3;
+            z-index: -1;
+        }
+        
+        &>div{
+            margin: 1rem 0;
+            p{
+                margin: 0.4rem 0;
+                &.subtitle{
+                    margin: 0;
+                    font-size: 1.2rem;
+                    color: #4A4A4A;
+                    font-weight: 600;
+                    text-decoration: double;
+                }
+            }
+            b{
+                color: $highlight-color;
+            }
+        }
+    }
 }
