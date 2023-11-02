@@ -24,6 +24,10 @@ nav{
     height: 100%;
     a{
         margin: 0 .5rem;
+        display: none;
+        @include atMedium{
+            display: block;
+        }
     }
     .resume{
         border: 2px solid $primary;
