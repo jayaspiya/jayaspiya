@@ -11,9 +11,10 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
-  <body>
-    <header class="wrapper" id="header">
+  <body x-data="App()">
+    <header id="header">
         <div class="header__responsive">
         <h1 class="site-title">
           Jayas Piya
@@ -24,132 +25,139 @@
         </div>
       </div>
       <nav id="nav">
-        <!-- <a href="#">About</a>
-        <a href="#">Work</a> -->
-        <a href="./assets/jayaspiya.pdf" target="_blank" class="resume">Resume</a>
+        <!-- <a href="#home">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#qualifications">Qualifications</a> -->
+          <a href="https://www.linkedin.com/in/jayaspiya/" target="_blank" class="custom_button_hover">Let's Connect</a>
+        
       </nav>
     </header>
-    <section class="banner wrapper">
-      <p class="banner__intro">👋 Hi there, I’m Jayas and I’m...</p>
-      <h1 class="banner__title">
-        A Data Enthusiastic Student with academic experience with analytical
-        tools such as Tableau, Excel and strong programming proficiency with
-        JavaScript and Python.
-      </h1>
-      <p class="banner__subtitle">
-        “Who has the data has the power.” ~ Tim O'Reilly
-      </p>
+
+    <section class="banner" id="home">
+        <p class="banner__intro">👋 Hi there, I’m Jayas and I’m...</p>
+        <h1 class="banner__title" x-text="summary">
+        </h1>
+        <p class="banner__subtitle" x-text="quote"></p>
     </section>
 
-    <section class="projects wrapper section-margin">
-      <h1 class="htitle">Academic Project</h1>
-      <div class="project">
-        <h2 class="project__title">Retail Intelligence System</h2>
-        <p class="project__subtitle">Research & Development</p>
-        <p class="project__description">
-          Harnessing the power of data to improve retail business through <span class="udline">data analytics</span>. 
-          The research was conducted using <span class="udline"> agile development methodology</span>. 
-          The project uses various analytical & <span class="udline">data management techniques </span> like concurrency management, high availability, and security to improve the efficiency of the project. 
-          Oracle Linux 6.7 and Oracle Database 11g  were setup for backend and Tableau for frontend <span class="udline">data visualization</span>. 
-          Furthermore, various concepts of <span class="udline">data warehouse</span> were implemented to improve the accessibility of data for analysis. 
-          Numerous ethical issues and physical disabilities like cognitive disabilities and visual impairment were also considered during the research and development of the project.
-        </p>
-        <div class="project__links">
-          <a href="https://public.tableau.com/app/profile/jayas.piya/viz/RetailIntelligenceSystem/IndividualProject">
-            <i class="fa fa-line-chart"></i> Tableau Visualization</a>
-        </div>
-      </div>
-      <div class="project">
-        <h2 class="project__title">Everest Book Store</h2>
-        <p class="project__subtitle">Android & Web Application</p>
-        <p class="project__description">
-          Everest Book has both android and web applications. 
-          <span class="udline">NodeJs-MongoDB RestAPI</span> backs the application backend. 
-          <span class="udline">Vuejs Framework</span> is used with custom CSS for the frontend web application and <span class="udline">Kotlin</span> for Android. 
-          The frontend & backend were served on Vercel and Heroku. MongoDB Atlas was used for data persistency and Cloudinary for CDN. 
-          The Web app has an <span class="udline">Admin dashboard</span> to edit the items and check the order list. 
-          A small <span class="udline">WearOS application</span> was also implemented for the android application and various <span class="udline">sensor triggers</span> were implemented on the android application.
-        </p>
-        <div class="project__links">
-          <a href="https://youtu.be/TVUvoO2hIcQ">
-            <i class="fa fa-safari"></i> Web App Video Link</a>
-          <a href="https://youtu.be/fkPnqDKzKQ8">
-            <i class="fa fa-android"></i> Android App Video Link</a>
-        </div>
-      </div>
-      <div class="project">
-        <h2 class="project__title">Pakwan Application</h2>
-        <p class="project__subtitle">Android Agile Group Project</p>
-        <p class="project__description">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus
-          perferendis officiis, consectetur quam nostrum accusamus deleniti vel,
-          corrupti quis a nesciunt dolorum! Repudiandae quia ullam maiores, est
-          obcaecati dicta ut!
-        </p>
-        <div class="project__links">
-          <a href="https://youtu.be/Jd1491a8jjU">
-            <i class="fa fa-group"></i> Video Link</a></a>
-        </div>
-      </div>
+    <section>
+        <h1>Skill Sets</h1>
+        <template x-for="skill in skills">
+            <div>
+                <h2 x-text='skill.group'></h2>
+                <p>
+                <ul>
+                    <template x-for="bulletpoint in skill.bulletpoints">
+                        <li >
+                            <b x-text='bulletpoint.name'></b>: <span x-text='bulletpoint.description'></span>
+                        </li>
+                    </template>
+                </ul>
+                </p>
+            </div>
+        </template>
     </section>
 
-    <section class="contacts wrapper section-margin">
-      <h1 class="htitle">Contacts</h1>
-      <div class="contact">
-        <div class="contact__detail">
-          <h2>Get In Touch</h2>
-          <p>
-            To contact me you can use can email me at or to know anything
-            related to me you can use the given email address. For any work or
-            any queries you can leave the message in the side form provided to
-            you.
-          </p>
-          <div class="contact__items">
-            <div class="contact__item">
-              <i class="fa fa-user" style="font-size: 2rem"></i>
-              <div class="contact__item__detail">
-                <p class="title">Name</p>
-                <p class="detail">Jayas Piya</p>
-              </div>
+    <section>
+        <h1>Experience</h1>
+        <template x-for="experience in experiences">
+            <div>
+                <h2 x-text="experience.company"></h2>
+                <p x-text="experience.detail"></p>
+                <template x-for="role in experience.roles">
+                    <div>
+                        <h3 x-text='role.title'></h3>
+                        <p x-text="role.duration"></p>
+                        <p x-text="role.detail"></p>
+                        <ul>
+                            <template x-for="bulletpoint in role.bulletpoints">
+                                <li x-text="bulletpoint"></li>
+                            </template>
+                        </ul>
+                    </div>
+                </template>
             </div>
-            <div class="contact__item">
-              <i class="fa fa-map-marker" style="font-size: 2.2rem"></i>
-              <div class="contact__item__detail">
-                <p class="title">Address</p>
-                <p class="detail">Kathmandu, Nepal</p>
-              </div>
+        </template>
+    </section>
+
+    <section>
+        <h1>Projects</h1>
+        <template x-for="project in projects">
+            <div>
+                <h2 x-text="project.title"></h2>
+                <p class="subtitle" x-text="project.category"></p>
+                <p x-text="project.description"></p>
+                <div>
+                    <b>Related Links</b>
+                    <ul>
+                        <template x-for="link in project.releventLinks">
+                            <li x-html="link"></li>
+                        </template>
+                    </ul>
+                </div>
             </div>
-            <div class="contact__item">
-              <i class="fa fa-envelope" style="font-size: 1.3rem"></i>
-              <div class="contact__item__detail">
-                <p class="title">Email</p>
-                <p class="detail">jayaspiya52@gmail.com</p>
-              </div>
+        </template>
+    </section>
+
+    <section>
+        <h1>Qualifications</h1>
+        <template x-for="qualification in qualifications">
+            <div>
+                <h3 x-text="qualification.title"></h3>
+                <ul>
+                    <template x-for="bulletpoint in qualification.bulletpoints">
+                        <li x-text="bulletpoint"></li>
+                    </template>
+                </ul>
+            </div>
+        </template>
+    </section>
+
+    <section>
+        <h1>Contacts</h1>
+        <div class="contact">
+          <div class="contact__detail">
+            <h2>Get In Touch</h2>
+            <p>
+              To contact me you can use can email me at or to know anything
+              related to me you can use the given email address. For any work or
+              any queries you can leave the message in the side form provided to
+              you.
+            </p>
+            <div class="contact__items">
+                <template x-for="contact in contactDetails">
+                    <div class="contact__item">
+                        <p x-html="contact.iconTag"></p>
+                        <div class="contact__item__detail">
+                            <p><b x-text="contact.type"></b></p>
+                            <p x-text="contact.response"></p>
+                        </div>
+                    </div>
+                </template>
             </div>
           </div>
+          <div class="contact__connect">
+            <h2>Ping Me!</h2>
+            <form x-data="MailApp()">
+                <input type="text" placeholder="Name" name="”name”" readonly />
+                <input type="text" placeholder="Subject" name="subject" readonly />
+                <textarea
+                    cols="10"
+                    rows="5"
+                    placeholder="Ask Queries..."
+                    name="”message”"
+                    readonly
+                ></textarea>
+                <div>
+                    <a href="mailto:jayaspiya52@gmail.com" class="custom_button_hover">Send Mail</a>
+                </div>
+          </form>
         </div>
-        <div class="contact__connect">
-          <h2>Ping Me!</h2>
-          <form>
-            <input type="text" placeholder="Name" name="”name”" required />
-            <input type="text" placeholder="Email" name="email" required />
-            <input type="text" placeholder="Subject" name="subject" required />
-            <textarea
-              cols="10"
-              rows="5"
-              placeholder="Ask Queries..."
-              name="”message”"
-              required
-            ></textarea>
-            <button disabled>
-              Send Message
-            </button>
-          </div>
-        </form>
-      </div>
-    </section>
+      </section>
 
-    <footer class="wrapper">
+    <footer>
       <ul>
         <li>
           <a href="https://www.facebook.com/zayazzp/" target="_blank">
@@ -163,8 +171,172 @@
         <li>
           <a href="https://github.com/jayaspiya" target="_blank"><i class="fa fa-github icon"></i></a></li>
       </ul>
-      <p>© Jayas Piya 2022</p>
+      <p>© Jayas Piya 2023</p>
     </footer>
-    <script src="app.js"></script>
+
+    <script>
+        portfolio_object ={
+            summary: "A Data Enthusiastic Student with academic experience with analytical tools such as Tableau, Excel and strong programming proficiency with JavaScript and Python.",
+            quote: "“Who has the data has the power.” ~ Tim O'Reilly",
+            skills: [
+                {
+                    group: "Technical Skills",
+                    bulletpoints: [
+                        {
+                            name: 'Programming',
+                            description: 'Strong proficiency in Python for data manipulation, analysis, and automation.'
+                        },
+                        {
+                            name: 'API Development',
+                            description: 'Proficient in Backend Development to facilitate seamless data exchange and integration between diverse systems, ensuring streamlined and scalable solutions.'
+                        },
+                        {
+                            name: 'Project Management',
+                            description: 'Focus on Agile methodologies, fostering adaptive planning, and ensuring iterative, timely delivery of high-quality projects'
+                        },
+                        {
+                            name: 'ETL Processes',
+                            description: 'Designing and executing Extract, Transform, Load processes for efficient data movement and transformation.'
+                        },
+                        {
+                            name: 'Data Ingestion',
+                            description: 'Designing, building, and maintaining connectors to facilitate data integration across diverse systems and sources.'
+                        },
+                        {
+                            name: 'Data Integrity Assurance',
+                            description: 'Verifying and maintaining the accuracy and consistency of data in pipelines to guarantee high data quality.'
+                        },
+                        {
+                            name: 'Data Visualization with Tableau',
+                            description: 'Transform complex datasets into visually engaging and easily understandable graphical representations.'
+                        }
+                    ],
+                },
+                {
+                    group: "Soft Skills",
+                    bulletpoints: [
+                        {
+                            name: 'Curiosity',
+                            description: 'A constant learner, perpetually seeking knowledge and exploring new technologies, encouraging a culture of continuous learning within the team.'
+                        },
+                        {
+                            name: 'Attention to Detail',
+                            description: 'Meticulous in quality assurance, ensuring precision and high standards by paying attention to even the smallest details.'
+                        },
+                        {
+                            name: 'Communication & Teamwork',
+                            description: 'A collaborative communicator and team player, adept at articulating complex technical concepts and fostering a cohesive team environment.'
+                        },
+                        {
+                            name: 'Problem Solving & Critical Thinking',
+                            description: 'An analytical problem solver with a curiosity-driven mindset, skilled in dissecting complex issues and generating innovative solutions.'
+                        },
+                        {
+                            name: 'Customer Service',
+                            description: 'Dedicated to a client-centric approach, actively listening to user feedback and swiftly addressing concerns with effective solutions.'
+                        },
+                    ],
+                }
+            ],
+            experiences: [
+                {
+                    company: 'Techkraft Inc.',
+                    detail: 'Lalitpur District, Nepal · Full-time · On-site',
+                    roles: [
+                        {
+                            title: 'Software Engineer',
+                            duration: 'Oct 2022 - Present',
+                            bulletpoints: [
+                                "Develop and maintain data connectors.",
+                                "Troubleshooting and debugging connectors issues.",
+                                "Develop and execute test cases and perform code reviews.",
+                                "Document data lineage, analysis process, ingestion plan and data pipeline."
+                            ]
+                        },
+                        {
+                            title: 'Data Trainee',
+                            duration: 'Jul 2022 - Sep 2022',
+                            detail: 'Practical experience in a variety of data analytics tools and techniques.',
+                            bulletpoints: [
+                                "Develop complex business logic for data manipulation, validation, and transformation with PLSQL.",
+                                "Analyzing structured data by filtering, grouping, merging, and aggregation in Pandas.",
+                                "Created custom functions & automate tasks in Google Sheets with Apps Script.",
+                                "Data Visualization in python & web interface.",
+                                "Query & manipulate JSON data with JQparser."
+                            ]
+                        },
+                    ]
+                }
+            ],
+            projects: [
+                {
+                    title: 'Retail Intelligence System',
+                    category: 'Research & Development',
+                    description: 'Harnessing the power of data to improve retail business through data analytics. The research was conducted using agile development methodology. The project uses various analytical & data management techniques like concurrency management, high availability, and security to improve the efficiency of the project. Oracle Linux 6.7 and Oracle Database 11g were setup for backend and Tableau for frontend data visualization. Furthermore, various concepts of data warehouse were implemented to improve the accessibility of data for analysis. Numerous ethical issues and physical disabilities like cognitive disabilities and visual impairment were also considered during the research and development of the project',
+                    releventLinks: [
+                        "<a href='https://public.tableau.com/app/profile/jayas.piya/viz/RetailIntelligenceSystem/IndividualProject'>Tableau Dashboard</a>"
+                    ]
+                },
+                {
+                    title: 'Everest Book Store',
+                    category: 'Android & Web Application',
+                    description: 'Everest Book has both android and web applications. NodeJs-MongoDB RestAPI backs the application backend. Vuejs Framework is used with custom CSS for the frontend web application and Kotlin for Android. The frontend & backend were served on Vercel and Heroku. MongoDB Atlas was used for data persistency and Cloudinary for CDN. The Web app has an Admin dashboard to edit the items and check the order list. A small WearOS application was also implemented for the android application and various sensor triggers were implemented on the android application.',
+                    releventLinks: [
+                        "<a href='https://youtu.be/TVUvoO2hIcQ'>Web Demo Video</a>",
+                        "<a href='https://youtu.be/fkPnqDKzKQ8'>Android Demo Video</a>"
+                    ]
+                },
+                {
+                    title: 'Pakwan Application',
+                    category: 'Android Agile Group Project',
+                    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus perferendis officiis, consectetur quam nostrum accusamus deleniti vel, corrupti quis a nesciunt dolorum! Repudiandae quia ullam maiores, est obcaecati dicta ut!',
+                    releventLinks: [
+                        "<a href='https://youtu.be/Jd1491a8jjU'>Project Demonstration</a>"
+                    ]
+                }
+            ],
+            qualifications: [
+                {
+                    title: 'BSc. in Computing (Hons)',
+                    bulletpoints:[
+                        "Softwarica College of IT and E-commerce, Kathmandu",
+                        "Major: Big Data Analytics & Visualization"
+                    ]
+                },
+                {
+                    title: 'BTEC HND in Computing',
+                    bulletpoints:[
+                        "ISMT College, Bharatpur, Chitwan",
+                        "Major: Full Stack Development w\ MEVN Stack"
+                    ]
+                }
+            ],
+            contactDetails: [
+                {
+                    type : 'Name',
+                    response : 'Jayas Piya',
+                    iconTag : '<i class="fa fa-user" style="font-size: 2rem"></i>',
+
+                },
+                {
+                    type : 'Address',
+                    response : 'Kathmandu, Nepal',
+                    iconTag : '<i class="fa fa-map-marker" style="font-size: 2.2rem"></i>',
+
+                },
+                {
+                    type : 'Email',
+                    response : 'jayaspiya52@gmail.com',
+                    iconTag : '<i class="fa fa-envelope" style="font-size: 1.3rem"></i>',
+
+                }
+            ]
+        }
+        const App = () => (portfolio_object);
+
+        function handleClick(e) {
+          alert('Hello World')
+        }
+    </script>
   </body>
 </html>

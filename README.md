@@ -1,7 +1,7 @@
 # :pizza: Jayas Piya :pizza:
 
-![Jayas Piya's GitHub Stats](https://github-readme-stats.vercel.app/api?username=jayaspiya&hide=contribs,prs&show_icons=true&include_all_commits=false)
+## 👋 Hi there, I’m Jayas and I’m...
 
-![Jayas Piya's GitHub Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=jayaspiya&layout=compact)
+# A Data Enthusiastic Student with academic experience with analytical tools such as Tableau, Excel and strong programming proficiency with JavaScript and Python.
 
-[![willianrod's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=zayazzp)](https://github.com/anuraghazra/github-readme-stats)
+> “Who has the data has the power.” ~ Tim O'Reilly

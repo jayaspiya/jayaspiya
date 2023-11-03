@@ -1,4 +1,5 @@
 header{
+    @include wrapper;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,65 +11,3 @@ header{
     box-shadow: 0px -5px 10px 5px rgba(0, 0, 0, 0.1);
     z-index: 2;
 }
-
-.site-title{
-    font-weight: 700;
-    font-size: 1.5rem;
-}
-
-nav{
-    display: flex;
-    // flex-direction: column;
-    align-items: center;
-    height: 100%;
-    a{
-        margin: 0 .5rem;
-    }
-    .resume{
-        border: 2px solid $primary;
-        background: #fff;
-        color: $primary;
-        font-weight: 700;
-        padding: 6px 12px;      
-        border-radius: 3px;
-        transition: .5s all ease;
-        cursor: pointer;
-        display: inline-block;
-        position: relative;
-        transition: 0.5s;
-        &:hover{
-            background: $primary;
-            color: #fff;
-        }
-    }
-    transition: all 0.8s ease;
-}
-
-
-.burger {
-    display: none;
-    cursor: pointer;
-    z-index: 10;
-    div {
-        width: 25px;
-        height: 3px;
-        background-color: black;
-        margin: 5px;
-        transition: all 0.3s ease;
-    }
-}
-
-.toggle .line1 {
-    transform: rotate(-45deg) translate(-3px, 3px);
-}
-.toggle .line2 {
-    transform: rotate(45deg) translate(-3px, -3px);
-}
-
-.header__responsive{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-}
-
