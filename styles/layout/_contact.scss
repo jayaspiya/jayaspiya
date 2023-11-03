@@ -1,48 +1,51 @@
-.contact{
+.contact {
+  display: flex;
+  flex-direction: column;
+
+  @include atMedium {
+    flex-direction: row;
+  }
+
+  & > div {
+    width: 100%;
+    @include atMedium {
+      width: 50%;
+    }
+  }
+  &__item {
     display: flex;
-    flex-direction: column;
+    margin: 0.2rem;
+    & > p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      i {
+        color: $highlight-color;
+        padding: 0 0.6rem;
+      }
+    }
+    &__detail {
+      p {
+        background: re;
+        margin: 0 !important;
+      }
+    }
+  }
 
-    @include atMedium{
-        flex-direction: row;
+  &__connect {
+    input,
+    textarea {
+      height: 100%;
+      width: 100%;
+      border: 1px solid lightgray;
+      border-radius: 6px;
+      outline: none;
+      padding: 0.5rem;
+      font-size: 1rem;
+      margin: 0.4rem 0;
+      @include atMedium {
+        width: 90%;
+      }
     }
-    
-    & > div{
-        width: 100%;
-        @include atMedium{
-            padding: 1rem;
-            width: 50%;
-        }
-    }
-
-    &__item{
-        display: flex;
-        margin: 1rem 0;
-        i{
-            margin: auto 0;
-            padding: 5px;
-            text-align: center;
-            color: $highlight-color;
-            padding-right: 20px;
-        }
-        .title{
-            font-weight: 700;
-        }
-    }
-
-    &__items{
-        margin: 2rem 0 ;
-    }
-    input, textarea{
-        height: 100%;
-        width: 100%;
-        border: 1px solid lightgray;
-        border-radius: 6px;
-        outline: none;
-        padding: .5rem;
-        font-size: 1.1rem;
-        margin: .4rem 0;
-        @include atMedium{
-            width: 90%;
-        }
-    }
+  }
 }
