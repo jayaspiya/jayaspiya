@@ -14,6 +14,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body x-data="App()">
+    <!-- Not Required -->
     <!-- <header id="header">
         <div class="header__responsive">
         <h1 class="site-title">
@@ -30,12 +31,13 @@
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#qualifications">Qualifications</a>
-        <a href="https://www.linkedin.com/in/jayaspiya/" target="_blank" class="custom_button_hover">Let's Connect</a>
+          <a href="https://www.linkedin.com/in/jayaspiya/" target="_blank" class="custom_button_hover">Let's Connect</a>
+        
       </nav>
     </header> -->
 
     <section class="banner" id="home">
-        <p class="banner__intro">👋 Hi there, I’m Jayas and I’m...</p>
+        <p class="banner__intro">👋 Hi there, I’m <b>Jayas Piya</b> and I’m...</p>
         <h1 class="banner__title" x-text="summary">
         </h1>
         <p class="banner__subtitle" x-text="quote"></p>
@@ -115,6 +117,25 @@
     </section>
 
     <section>
+        <h1>Certifications</h1>
+        <div class="grid">
+            <template x-for="certification in certifications" >
+                <div class="flex">
+                    <div class="flex">
+                        <img class="certification_img" x-bind:src="certification.img" alt="Dynamic Image">
+                    </div>
+                    <div>
+                        <h3 x-text="certification.name"></h3>
+                        <p x-text="certification.provider"></p>
+                        <p> Issued: <span x-text="certification.issued"></span></p>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </section>
+
+    <!-- Not Required -->
+    <!-- <section>
         <h1>Contacts</h1>
         <div class="contact">
           <div class="contact__detail">
@@ -154,7 +175,7 @@
                 </div>
           </form>
         </div>
-      </section>
+      </section> -->
 
     <footer>
       <ul>
@@ -170,7 +191,7 @@
         <li>
           <a href="https://github.com/jayaspiya" target="_blank"><i class="fa fa-github icon"></i></a></li>
       </ul>
-      <p>© Jayas Piya 2023</p>
+      <p>© Jayas Piya 2024</p>
     </footer>
 
     <script>
@@ -308,6 +329,44 @@
                         "ISMT College, Bharatpur, Chitwan",
                         "Major: Full Stack Development w\ MEVN Stack"
                     ]
+                }
+            ],
+            certifications: [
+                {
+                    "name": "Google Data Analytics Certificate",
+                    "provider": "Coursera",
+                    "issued": "Apr 2023",
+                    "img": "./assets/certifications/coursera_logo.jpg"
+                },
+                {
+                    "name": "Oracle Database 12c: Advanced SQL",
+                    "provider": "Linkedin",
+                    "issued": "Jul 2022",
+                    "img": "./assets/certifications/linkedin_logo.jpg"
+                },
+                {
+                    "name": "Oracle Database 19c: PL/SQL",
+                    "provider": "Linkedin",
+                    "issued": "Jul 2022",
+                    "img": "./assets/certifications/linkedin_logo.jpg"
+                },
+                {
+                    "name": "Programming in Python",
+                    "provider": "Coursera",
+                    "issued": "Jul 2022",
+                    "img": "./assets/certifications/coursera_logo.jpg"
+                },
+                {
+                    "name": "Oracle Database 12c: Basic SQL",
+                    "provider": "Linkedin",
+                    "issued": "Jun 2022",
+                    "img": "./assets/certifications/linkedin_logo.jpg"
+                },
+                {
+                    "name": "Frontend Fundamentals",
+                    "provider": "Pirple",
+                    "issued": "Jul 2020",
+                    "img": "./assets/certifications/pirple_logo.png"
                 }
             ],
             contactDetails: [
