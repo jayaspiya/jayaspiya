@@ -11,7 +11,6 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body x-data="App()">
     <!-- Not Required -->
@@ -38,104 +37,239 @@
 
     <section class="banner" id="home">
         <p class="banner__intro">👋 Hi there, I’m <b>Jayas Piya</b> and I’m...</p>
-        <h1 class="banner__title" x-text="summary">
+        <h1 class="banner__title">
+            A Data Enthusiastic Student with academic experience with analytical tools such as Tableau, Excel and strong programming proficiency with JavaScript and Python.
         </h1>
-        <p class="banner__subtitle" x-text="quote"></p>
+        <p class="banner__subtitle" >
+            “Who has the data has the power.” ~ Tim O'Reilly
+        </p>
     </section>
 
     <section>
         <h1>Skill Sets</h1>
-        <template x-for="skill in skills">
-            <div>
-                <h2 x-text='skill.group'></h2>
-                <p>
-                <ul>
-                    <template x-for="bulletpoint in skill.bulletpoints">
-                        <li >
-                            <b x-text='bulletpoint.name'></b>: <span x-text='bulletpoint.description'></span>
-                        </li>
-                    </template>
-                </ul>
-                </p>
-            </div>
-        </template>
+
+        <div>
+            <h2>Technical Skills</h2>
+            <p>
+            <ul>
+                <li>
+                    <b>Programming</b>:
+                    <span>Strong proficiency in Python for data manipulation, analysis, and automation.</span>
+                </li>
+                <li>
+                    <b>API Development</b>:
+                    <span>Proficient in Backend Development to facilitate seamless data exchange and integration between diverse systems, ensuring streamlined and scalable solutions.</span>
+                </li>
+                <li>
+                    <b>Project Management</b>:
+                    <span>Focus on Agile methodologies, fostering adaptive planning, and ensuring iterative, timely delivery of high-quality projects</span>
+                </li>
+                <li>
+                    <b>ETL Processes</b>:
+                    <span>Designing and executing Extract, Transform, Load processes for efficient data movement and transformation.</span>
+                </li>
+                <li>
+                    <b>Data Ingestion</b>:
+                    <span>Designing, building, and maintaining connectors to facilitate data integration across diverse systems and sources.</span>
+                </li>
+                <li>
+                    <b>Data Integrity Assurance</b>:
+                    <span>Verifying and maintaining the accuracy and consistency of data in pipelines to guarantee high data quality.</span>
+                </li>
+                <li>
+                    <b>Data Visualization with Tableau</b>:
+                    <span>Transform complex datasets into visually engaging and easily understandable graphical representations.</span>
+                </li>
+            </ul>
+            </p>
+        </div>
+
+        
+        <div>
+            <h2>Soft Skills</h2>
+            <p>
+            <ul>
+                <li>
+                    <b>Curiosity</b>:
+                    <span>A constant learner, perpetually seeking knowledge and exploring new technologies, encouraging a culture of continuous learning within the team.</span>
+                </li>
+                <li>
+                    <b>Attention to Detail</b>:
+                    <span>Meticulous in quality assurance, ensuring precision and high standards by paying attention to even the smallest details.</span>
+                </li>
+                <li>
+                    <b>Communication & Teamwork</b>:
+                    <span>A collaborative communicator and team player, adept at articulating complex technical concepts and fostering a cohesive team environment.</span>
+                </li>
+                <li>
+                    <b>Problem Solving & Critical Thinking</b>:
+                    <span>An analytical problem solver with a curiosity-driven mindset, skilled in dissecting complex issues and generating innovative solutions.</span>
+                </li>
+                <li>
+                    <b>Customer Service</b>:
+                    <span>Dedicated to a client-centric approach, actively listening to user feedback and swiftly addressing concerns with effective solutions.</span>
+                </li>
+            </ul>
+            </p>
+        </div>
     </section>
 
     <section>
         <h1>Experience</h1>
-        <template x-for="experience in experiences">
+        <div>
+            <h2>Techkraft Inc.</h2>
+            <p>Lalitpur District, Nepal · Full-time · On-site</p>
             <div>
-                <h2 x-text="experience.company"></h2>
-                <p x-text="experience.detail"></p>
-                <template x-for="role in experience.roles">
-                    <div>
-                        <h3 x-text='role.title'></h3>
-                        <p x-text="role.duration"></p>
-                        <p x-text="role.detail"></p>
-                        <ul>
-                            <template x-for="bulletpoint in role.bulletpoints">
-                                <li x-text="bulletpoint"></li>
-                            </template>
-                        </ul>
-                    </div>
-                </template>
+                <h3>Software Engineer</h3>
+                <p>Oct 2022 - Present</p>
+                <ul>
+                    <li>Develop and maintain data connectors.</li>
+                    <li>Troubleshooting and debugging connectors issues.</li>
+                    <li>Develop and execute test cases and perform code reviews.</li>
+                    <li>Document data lineage, analysis process, ingestion plan and data pipeline.</li>
+                </ul>
             </div>
-        </template>
+
+            <div>
+                <h3>Data Trainee</h3>
+                <p>Jul 2022 - Sep 2022</p>
+                <p>Practical experience in a variety of data analytics tools and techniques.</p>
+                <ul>
+                    <li>Develop complex business logic for data manipulation, validation, and transformation with PLSQL.</li>
+                    <li>Analyzing structured data by filtering, grouping, merging, and aggregation in Pandas.</li>
+                    <li>Created custom functions & automate tasks in Google Sheets with Apps Script.</li>
+                    <li>Data Visualization in python & web interface.</li>
+                    <li>Query & manipulate JSON data with JQparser.</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <section>
         <h1>Projects</h1>
-        <template x-for="project in projects">
+        <div>
+            <h2>Retail Intelligence System</h2>
+            <p class="subtitle">Research & Development</p>
+            <p>Harnessing the power of data to improve retail business through data analytics. The research was conducted using agile development methodology. The project uses various analytical & data management techniques like concurrency management, high availability, and security to improve the efficiency of the project. Oracle Linux 6.7 and Oracle Database 11g were setup for backend and Tableau for frontend data visualization. Furthermore, various concepts of data warehouse were implemented to improve the accessibility of data for analysis. Numerous ethical issues and physical disabilities like cognitive disabilities and visual impairment were also considered during the research and development of the project</p>
             <div>
-                <h2 x-text="project.title"></h2>
-                <p class="subtitle" x-text="project.category"></p>
-                <p x-text="project.description"></p>
-                <div>
-                    <b>Related Links</b>
-                    <ul>
-                        <template x-for="link in project.releventLinks">
-                            <li x-html="link"></li>
-                        </template>
-                    </ul>
-                </div>
+                <b>Related Links</b>
+                <ul>
+                    <li><a href='https://public.tableau.com/app/profile/jayas.piya/viz/RetailIntelligenceSystem/IndividualProject'>Tableau Dashboard</a></li>
+                </ul>
             </div>
-        </template>
+        </div>
+        <div>
+            <h2>Everest Book Store</h2>
+            <p class="subtitle">Android & Web Application</p>
+            <p>Everest Book has both android and web applications. NodeJs-MongoDB RestAPI backs the application backend. Vuejs Framework is used with custom CSS for the frontend web application and Kotlin for Android. The frontend & backend were served on Vercel and Heroku. MongoDB Atlas was used for data persistency and Cloudinary for CDN. The Web app has an Admin dashboard to edit the items and check the order list. A small WearOS application was also implemented for the android application and various sensor triggers were implemented on the android application.</p>
+            <div>
+                <b>Related Links</b>
+                <ul>
+                    <li><a href='https://youtu.be/TVUvoO2hIcQ'>Web Demo Video</a></li>
+                    <li><a href='https://youtu.be/fkPnqDKzKQ8'>Android Demo Video</a></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h2>Pakwan Application</h2>
+            <p class="subtitle">Android Agile Group Project</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus perferendis officiis, consectetur quam nostrum accusamus deleniti vel, corrupti quis a nesciunt dolorum! Repudiandae quia ullam maiores, est obcaecati dicta ut!</p>
+            <div>
+                <b>Related Links</b>
+                <ul>
+                    <li><a href='https://youtu.be/Jd1491a8jjU'>Project Demonstration</a></li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <section>
         <h1>Qualifications</h1>
-        <template x-for="qualification in qualifications">
-            <div>
-                <h3 x-text="qualification.title"></h3>
-                <ul>
-                    <template x-for="bulletpoint in qualification.bulletpoints">
-                        <li x-text="bulletpoint"></li>
-                    </template>
-                </ul>
-            </div>
-        </template>
+        <div>
+            <h3>BSc. in Computing (Hons)</h3>
+            <ul>
+                <template>
+                    <li>Softwarica College of IT and E-commerce, Kathmandu</li>
+                    <li>Major: Big Data Analytics & Visualization</li>
+                </template>
+            </ul>
+        </div>
+        <div>
+            <h3>BTEC HND in Computing</h3>
+            <ul>
+                <li>ISMT College, Bharatpur, Chitwan</li>
+                <li>Major: Full Stack Development w\ MEVN Stack</li>
+            </ul>
+        </div>
     </section>
 
     <section>
         <h1>Certifications</h1>
         <div class="grid">
-            <template x-for="certification in certifications" >
+            <div class="flex">
                 <div class="flex">
-                    <div class="flex">
-                        <img class="certification_img" x-bind:src="certification.img" alt="Dynamic Image">
-                    </div>
-                    <div>
-                        <h3 x-text="certification.name"></h3>
-                        <p x-text="certification.provider"></p>
-                        <p> Issued: <span x-text="certification.issued"></span></p>
-                    </div>
+                    <img class="certification_img" src="./assets/certifications/coursera_logo.jpg" alt="Dynamic Image">
                 </div>
-            </template>
+                <div>
+                    <h3>Google Data Analytics Certificate</h3>
+                    <p>Coursera</p>
+                    <p> Issued: Apr 2023</p>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="flex">
+                    <img class="certification_img" src="./assets/certifications/linkedin_logo.jpg" alt="Dynamic Image">
+                </div>
+                <div>
+                    <h3>Oracle Database 12c: Advanced SQL</h3>
+                    <p>Linkedin</p>
+                    <p> Issued: Jul 2022</p>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="flex">
+                    <img class="certification_img" src="./assets/certifications/linkedin_logo.jpg" alt="Dynamic Image">
+                </div>
+                <div>
+                    <h3>Oracle Database 19c: PL/SQL</h3>
+                    <p>Linkedin</p>
+                    <p> Issued: Jul 2022</p>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="flex">
+                    <img class="certification_img" src="./assets/certifications/coursera_logo.jpg" alt="Dynamic Image">
+                </div>
+                <div>
+                    <h3>Programming in Python</h3>
+                    <p>Coursera</p>
+                    <p> Issued: Jul 2022</p>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="flex">
+                    <img class="certification_img" src="./assets/certifications/linkedin_logo.jpg" alt="Dynamic Image">
+                </div>
+                <div>
+                    <h3>Oracle Database 12c: Basic SQL</h3>
+                    <p>Linkedin</p>
+                    <p> Issued: Jun 2022</p>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="flex">
+                    <img class="certification_img" src="./assets/certifications/pirple_logo.png" alt="Dynamic Image">
+                </div>
+                <div>
+                    <h3>Frontend Fundamentals</h3>
+                    <p>Pirple</p>
+                    <p> Issued: Jul 2020</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Not Required -->
-    <!-- <section>
+    <section>
         <h1>Contacts</h1>
         <div class="contact">
           <div class="contact__detail">
@@ -147,15 +281,27 @@
               you.
             </p>
             <div class="contact__items">
-                <template x-for="contact in contactDetails">
-                    <div class="contact__item">
-                        <p x-html="contact.iconTag"></p>
-                        <div class="contact__item__detail">
-                            <p><b x-text="contact.type"></b></p>
-                            <p x-text="contact.response"></p>
-                        </div>
+                <div class="contact__item">
+                    <p><i class="fa fa-user" style="font-size: 2rem"></i></p>
+                    <div class="contact__item__detail">
+                        <p><b>Name</b></p>
+                        <p>Jayas Piya</p>
                     </div>
-                </template>
+                </div>
+                <div class="contact__item">
+                    <p><i class="fa fa-map-marker" style="font-size: 2.2rem"></i></p>
+                    <div class="contact__item__detail">
+                        <p><b>Address</b></p>
+                        <p>Kathmandu, Nepal</p>
+                    </div>
+                </div>
+                <div class="contact__item">
+                    <p><i class="fa fa-envelope" style="font-size: 1.3rem"></i></p>
+                    <div class="contact__item__detail">
+                        <p><b>Email</b></p>
+                        <p>jayaspiya52@gmail.com</p>
+                    </div>
+                </div>
             </div>
           </div>
           <div class="contact__connect">
@@ -175,7 +321,7 @@
                 </div>
           </form>
         </div>
-      </section> -->
+      </section>
 
     <footer>
       <ul>
@@ -193,208 +339,5 @@
       </ul>
       <p>© Jayas Piya 2024</p>
     </footer>
-
-    <script>
-        portfolio_object ={
-            summary: "A Data Enthusiastic Student with academic experience with analytical tools such as Tableau, Excel and strong programming proficiency with JavaScript and Python.",
-            quote: "“Who has the data has the power.” ~ Tim O'Reilly",
-            skills: [
-                {
-                    group: "Technical Skills",
-                    bulletpoints: [
-                        {
-                            name: 'Programming',
-                            description: 'Strong proficiency in Python for data manipulation, analysis, and automation.'
-                        },
-                        {
-                            name: 'API Development',
-                            description: 'Proficient in Backend Development to facilitate seamless data exchange and integration between diverse systems, ensuring streamlined and scalable solutions.'
-                        },
-                        {
-                            name: 'Project Management',
-                            description: 'Focus on Agile methodologies, fostering adaptive planning, and ensuring iterative, timely delivery of high-quality projects'
-                        },
-                        {
-                            name: 'ETL Processes',
-                            description: 'Designing and executing Extract, Transform, Load processes for efficient data movement and transformation.'
-                        },
-                        {
-                            name: 'Data Ingestion',
-                            description: 'Designing, building, and maintaining connectors to facilitate data integration across diverse systems and sources.'
-                        },
-                        {
-                            name: 'Data Integrity Assurance',
-                            description: 'Verifying and maintaining the accuracy and consistency of data in pipelines to guarantee high data quality.'
-                        },
-                        {
-                            name: 'Data Visualization with Tableau',
-                            description: 'Transform complex datasets into visually engaging and easily understandable graphical representations.'
-                        }
-                    ],
-                },
-                {
-                    group: "Soft Skills",
-                    bulletpoints: [
-                        {
-                            name: 'Curiosity',
-                            description: 'A constant learner, perpetually seeking knowledge and exploring new technologies, encouraging a culture of continuous learning within the team.'
-                        },
-                        {
-                            name: 'Attention to Detail',
-                            description: 'Meticulous in quality assurance, ensuring precision and high standards by paying attention to even the smallest details.'
-                        },
-                        {
-                            name: 'Communication & Teamwork',
-                            description: 'A collaborative communicator and team player, adept at articulating complex technical concepts and fostering a cohesive team environment.'
-                        },
-                        {
-                            name: 'Problem Solving & Critical Thinking',
-                            description: 'An analytical problem solver with a curiosity-driven mindset, skilled in dissecting complex issues and generating innovative solutions.'
-                        },
-                        {
-                            name: 'Customer Service',
-                            description: 'Dedicated to a client-centric approach, actively listening to user feedback and swiftly addressing concerns with effective solutions.'
-                        },
-                    ],
-                }
-            ],
-            experiences: [
-                {
-                    company: 'Techkraft Inc.',
-                    detail: 'Lalitpur District, Nepal · Full-time · On-site',
-                    roles: [
-                        {
-                            title: 'Software Engineer',
-                            duration: 'Oct 2022 - Present',
-                            bulletpoints: [
-                                "Develop and maintain data connectors.",
-                                "Troubleshooting and debugging connectors issues.",
-                                "Develop and execute test cases and perform code reviews.",
-                                "Document data lineage, analysis process, ingestion plan and data pipeline."
-                            ]
-                        },
-                        {
-                            title: 'Data Trainee',
-                            duration: 'Jul 2022 - Sep 2022',
-                            detail: 'Practical experience in a variety of data analytics tools and techniques.',
-                            bulletpoints: [
-                                "Develop complex business logic for data manipulation, validation, and transformation with PLSQL.",
-                                "Analyzing structured data by filtering, grouping, merging, and aggregation in Pandas.",
-                                "Created custom functions & automate tasks in Google Sheets with Apps Script.",
-                                "Data Visualization in python & web interface.",
-                                "Query & manipulate JSON data with JQparser."
-                            ]
-                        },
-                    ]
-                }
-            ],
-            projects: [
-                {
-                    title: 'Retail Intelligence System',
-                    category: 'Research & Development',
-                    description: 'Harnessing the power of data to improve retail business through data analytics. The research was conducted using agile development methodology. The project uses various analytical & data management techniques like concurrency management, high availability, and security to improve the efficiency of the project. Oracle Linux 6.7 and Oracle Database 11g were setup for backend and Tableau for frontend data visualization. Furthermore, various concepts of data warehouse were implemented to improve the accessibility of data for analysis. Numerous ethical issues and physical disabilities like cognitive disabilities and visual impairment were also considered during the research and development of the project',
-                    releventLinks: [
-                        "<a href='https://public.tableau.com/app/profile/jayas.piya/viz/RetailIntelligenceSystem/IndividualProject'>Tableau Dashboard</a>"
-                    ]
-                },
-                {
-                    title: 'Everest Book Store',
-                    category: 'Android & Web Application',
-                    description: 'Everest Book has both android and web applications. NodeJs-MongoDB RestAPI backs the application backend. Vuejs Framework is used with custom CSS for the frontend web application and Kotlin for Android. The frontend & backend were served on Vercel and Heroku. MongoDB Atlas was used for data persistency and Cloudinary for CDN. The Web app has an Admin dashboard to edit the items and check the order list. A small WearOS application was also implemented for the android application and various sensor triggers were implemented on the android application.',
-                    releventLinks: [
-                        "<a href='https://youtu.be/TVUvoO2hIcQ'>Web Demo Video</a>",
-                        "<a href='https://youtu.be/fkPnqDKzKQ8'>Android Demo Video</a>"
-                    ]
-                },
-                {
-                    title: 'Pakwan Application',
-                    category: 'Android Agile Group Project',
-                    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus perferendis officiis, consectetur quam nostrum accusamus deleniti vel, corrupti quis a nesciunt dolorum! Repudiandae quia ullam maiores, est obcaecati dicta ut!',
-                    releventLinks: [
-                        "<a href='https://youtu.be/Jd1491a8jjU'>Project Demonstration</a>"
-                    ]
-                }
-            ],
-            qualifications: [
-                {
-                    title: 'BSc. in Computing (Hons)',
-                    bulletpoints:[
-                        "Softwarica College of IT and E-commerce, Kathmandu",
-                        "Major: Big Data Analytics & Visualization"
-                    ]
-                },
-                {
-                    title: 'BTEC HND in Computing',
-                    bulletpoints:[
-                        "ISMT College, Bharatpur, Chitwan",
-                        "Major: Full Stack Development w\ MEVN Stack"
-                    ]
-                }
-            ],
-            certifications: [
-                {
-                    "name": "Google Data Analytics Certificate",
-                    "provider": "Coursera",
-                    "issued": "Apr 2023",
-                    "img": "./assets/certifications/coursera_logo.jpg"
-                },
-                {
-                    "name": "Oracle Database 12c: Advanced SQL",
-                    "provider": "Linkedin",
-                    "issued": "Jul 2022",
-                    "img": "./assets/certifications/linkedin_logo.jpg"
-                },
-                {
-                    "name": "Oracle Database 19c: PL/SQL",
-                    "provider": "Linkedin",
-                    "issued": "Jul 2022",
-                    "img": "./assets/certifications/linkedin_logo.jpg"
-                },
-                {
-                    "name": "Programming in Python",
-                    "provider": "Coursera",
-                    "issued": "Jul 2022",
-                    "img": "./assets/certifications/coursera_logo.jpg"
-                },
-                {
-                    "name": "Oracle Database 12c: Basic SQL",
-                    "provider": "Linkedin",
-                    "issued": "Jun 2022",
-                    "img": "./assets/certifications/linkedin_logo.jpg"
-                },
-                {
-                    "name": "Frontend Fundamentals",
-                    "provider": "Pirple",
-                    "issued": "Jul 2020",
-                    "img": "./assets/certifications/pirple_logo.png"
-                }
-            ],
-            contactDetails: [
-                {
-                    type : 'Name',
-                    response : 'Jayas Piya',
-                    iconTag : '<i class="fa fa-user" style="font-size: 2rem"></i>',
-
-                },
-                {
-                    type : 'Address',
-                    response : 'Kathmandu, Nepal',
-                    iconTag : '<i class="fa fa-map-marker" style="font-size: 2.2rem"></i>',
-
-                },
-                {
-                    type : 'Email',
-                    response : 'jayaspiya52@gmail.com',
-                    iconTag : '<i class="fa fa-envelope" style="font-size: 1.3rem"></i>',
-
-                }
-            ]
-        }
-        const App = () => (portfolio_object);
-                                                                                                                                                                                                                                                            
-        function handleClick(e) {
-          alert('Hello World')
-        }
-    </script>
   </body>
 </html>
