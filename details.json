@@ -67,8 +67,17 @@
                 "detail": "Lalitpur District, Nepal · Full-time · On-site",
                 "roles": [
                     {
+                        "title": "Software Engineer II",
+                        "duration": "Jan 2024 - Present",
+                        "bulletpoints": [
+                            "Develop and maintain efficient workflows for data pipelines, maximizing scalability and adhering to industry best practices.",
+                            "Parse with HL7 FHIR datasets, enhancing capabilities in managing healthcare data with precision and compliance.",
+                            "Troubleshoot and debug connector issues to ensure seamless data flow and integrity."
+                        ]
+                    },
+                    {
                         "title": "Software Engineer",
-                        "duration": "Oct 2022 - Present",
+                        "duration": "Oct 2022 - Dec 2023",
                         "bulletpoints": [
                             "Develop and maintain data connectors.",
                             "Troubleshooting and debugging connectors issues.",
@@ -93,8 +102,29 @@
         ],
         "projects": [
             {
+                "title": "Student Dropout Predictin with Decision Tree & Random Forest Algorithm",
+                "category": "Machine Learning",
+                "isVisible": true,
+                "description": "This project explored the use of machine learning to predict student success and dropout. The implemented solution utilized Decision Tree (DT) and Random Forest (RF) classification algorithms to analyze student data. After cleaning and preparing the data, techniques were employed to handle imbalances and perform exploratory analysis to understand the data's underlying characteristics. Both models were then built and evaluated, with overfitting addressed in the Decision Tree. Finally, the project culminated in the deployment of the model within a user-friendly Flask application for predicting student outcomes.",
+                "releventLinks": [
+                    "<a href='https://youtu.be/zDhBe-Ah20Q?si=Haep4JMHgyQCG9HW'>Demonstration</a>",
+                    "<a href='https://github.com/jayaspiya/student-dropout-prediction-dt-rf-classifier'>Code Repository</a>"
+                ]
+            },
+            {
+                "title": "Vertical Search Engine & Subject Classifier System",
+                "category": "Information Retrieval",
+                "isVisible": true,
+                "description": "This project developed a web-based, Google Scholar-like search engine focused on healthcare research by the Research Centre for Intelligent Healthcare (RCIH). Crawling RCIH member publications weekly, the system extracts author names, publication years, and titles, while offering keyword-based search with relevancy ranking and subject classification functionalities to empower researchers with up-to-date and focused exploration of RCIH's healthcare research.",
+                "releventLinks": [
+                    "<a href='https://www.youtube.com/watch?v=nKvKg-m2ihw'>Demonstration</a>",
+                    "<a href='https://github.com/jayaspiya/information-retrieval-system'>Code Repository</a>"
+                ]
+            },
+            {
                 "title": "Retail Intelligence System",
                 "category": "Research & Development",
+                "isVisible": true,
                 "description": "Harnessing the power of data to improve retail business through data analytics. The research was conducted using agile development methodology. The project uses various analytical & data management techniques like concurrency management, high availability, and security to improve the efficiency of the project. Oracle Linux 6.7 and Oracle Database 11g were setup for backend and Tableau for frontend data visualization. Furthermore, various concepts of data warehouse were implemented to improve the accessibility of data for analysis. Numerous ethical issues and physical disabilities like cognitive disabilities and visual impairment were also considered during the research and development of the project",
                 "releventLinks": [
                     "<a href='https://public.tableau.com/app/profile/jayas.piya/viz/RetailIntelligenceSystem/IndividualProject'>Tableau Dashboard</a>"
@@ -103,6 +133,7 @@
             {
                 "title": "Everest Book Store",
                 "category": "Android & Web Application",
+                "isVisible": true,
                 "description": "Everest Book has both android and web applications. NodeJs-MongoDB RestAPI backs the application backend. Vuejs Framework is used with custom CSS for the frontend web application and Kotlin for Android. The frontend & backend were served on Vercel and Heroku. MongoDB Atlas was used for data persistency and Cloudinary for CDN. The Web app has an Admin dashboard to edit the items and check the order list. A small WearOS application was also implemented for the android application and various sensor triggers were implemented on the android application.",
                 "releventLinks": [
                     "<a href='https://youtu.be/TVUvoO2hIcQ'>Web Demo Video</a>",
@@ -112,7 +143,8 @@
             {
                 "title": "Pakwan Application",
                 "category": "Android Agile Group Project",
-                "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus perferendis officiis, consectetur quam nostrum accusamus deleniti vel, corrupti quis a nesciunt dolorum! Repudiandae quia ullam maiores, est obcaecati dicta ut!",
+                "isVisible": false,
+                "description": "Pakwan Application is a social media app developed to provide a positive space for food lovers to connect and share their love for food. Developed under the Agile methodology, the application offers features such as registration and login, creating a profile with phone number, address, website, and profile image. The app allows users to post images or status updates, share recipes with preparation details, ingredients, quantities, and cooking directions with hashtags. The app also includes features such as trending, discover, review, and rating to view popular posts and recipes, search for and follow other users, rate and review recipes, comment on posts, save recipes, and edit posts and recipes. With a password reset option, users can request a code via email to reset their password. Pakwan app provides a fun and engaging experience for users to connect over their shared love for food.",
                 "releventLinks": [
                     "<a href='https://youtu.be/Jd1491a8jjU'>Project Demonstration</a>"
                 ]
@@ -136,39 +168,66 @@
         ],
         "certifications": [
             {
+                "name": "Big Data Fundamentals with PySpark",
+                "provider": "DataCamp",
+                "issued": "Jan 2024",
+                "isVisible": true,
+                "img": "./assets/certifications/datacamp_logo.jpg"
+            },
+            {
+                "name": "Cleaning Data with PySpark",
+                "provider": "DataCamp",
+                "issued": "Jan 2024",
+                "isVisible": true,
+                "img": "./assets/certifications/datacamp_logo.jpg"
+            },
+            {
+                "name": "Software Engineering Principles in Python",
+                "provider": "DataCamp",
+                "issued": "Jan 2024",
+                "isVisible": true,
+                "img": "./assets/certifications/datacamp_logo.jpg"
+            },
+            {
                 "name": "Google Data Analytics Certificate",
                 "provider": "Coursera",
                 "issued": "Apr 2023",
+                "isVisible": true,
                 "img": "./assets/certifications/coursera_logo.jpg"
             },
             {
                 "name": "Oracle Database 12c: Advanced SQL",
                 "provider": "Linkedin",
                 "issued": "Jul 2022",
+                "isVisible": true,
                 "img": "./assets/certifications/linkedin_logo.jpg"
             },
             {
                 "name": "Oracle Database 19c: PL/SQL",
                 "provider": "Linkedin",
                 "issued": "Jul 2022",
+                "isVisible": true,
                 "img": "./assets/certifications/linkedin_logo.jpg"
             },
             {
                 "name": "Programming in Python",
                 "provider": "Coursera",
                 "issued": "Jul 2022",
+                "isVisible": true,
                 "img": "./assets/certifications/coursera_logo.jpg"
             },
             {
                 "name": "Oracle Database 12c: Basic SQL",
                 "provider": "Linkedin",
                 "issued": "Jun 2022",
+                "isVisible": true,
                 "img": "./assets/certifications/linkedin_logo.jpg"
             },
             {
                 "name": "Frontend Fundamentals",
                 "provider": "Pirple",
                 "issued": "Jul 2020",
+                "isVisible": false,
                 "img": "./assets/certifications/pirple_logo.png"
             }
         ]

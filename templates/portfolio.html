@@ -87,19 +87,21 @@
     <section>
         <h1>Projects</h1>
         {% for project in projects %}
-        <div>
-            <h2>{{ project['title'] }}</h2>
-            <p class="subtitle">{{ project['category'] }}</p>
-            <p>{{ project['description'] }}</p>
-            <div>
-                <b>Related Links</b>
-                <ul>
-                    {% for item in project['releventLinks'] %}
-                        <li>{{ item}} </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
+            {% if project['isVisible'] %}
+                <div>
+                    <h2>{{ project['title'] }}</h2>
+                    <p class="subtitle">{{ project['category'] }}</p>
+                    <p>{{ project['description'] }}</p>
+                    <div>
+                        <b>Related Links</b>
+                        <ul>
+                            {% for item in project['releventLinks'] %}
+                                <li>{{ item}} </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            {% endif %}
         {% endfor %}
     </section>
 
@@ -123,16 +125,18 @@
         <h1>Certifications</h1>
         <div class="grid">
             {% for certification in certifications %}
-            <div class="flex">
-                <div class="flex">
-                    <img class="certification_img" src="{{certification['img']}}" alt="Dynamic Image">
-                </div>
-                <div>
-                    <h3>{{ certification['name'] }}</h3>
-                    <p>{{ certification['provider'] }}</p>
-                    <p> Issued: {{ certification['issued'] }}</p>
-                </div>
-            </div>
+                {% if certification['isVisible'] %}
+                    <div class="flex">
+                        <div class="flex">
+                            <img class="certification_img" src="{{certification['img']}}" alt="Dynamic Image">
+                        </div>
+                        <div>
+                            <h3>{{ certification['name'] }}</h3>
+                            <p>{{ certification['provider'] }}</p>
+                            <p> Issued: {{ certification['issued'] }}</p>
+                        </div>
+                    </div>
+                {% endif %}
             {% endfor %}
         </div>
     </section>
