@@ -67,22 +67,15 @@
                 "detail": "Lalitpur District, Nepal · Full-time · On-site",
                 "roles": [
                     {
-                        "title": "Software Engineer II",
-                        "duration": "Jan 2024 - Present",
-                        "bulletpoints": [
-                            "Develop and maintain efficient workflows for data pipelines, maximizing scalability and adhering to industry best practices.",
-                            "Parse with HL7 FHIR datasets, enhancing capabilities in managing healthcare data with precision and compliance.",
-                            "Troubleshoot and debug connector issues to ensure seamless data flow and integrity."
-                        ]
-                    },
-                    {
                         "title": "Software Engineer",
-                        "duration": "Oct 2022 - Dec 2023",
+                        "duration": "Oct 2022 - Present",
                         "bulletpoints": [
-                            "Develop and maintain data connectors.",
-                            "Troubleshooting and debugging connectors issues.",
-                            "Develop and execute test cases and perform code reviews.",
-                            "Document data lineage, analysis process, ingestion plan and data pipeline."
+                            "Engaged in the US Healthcare Domain",
+                            "Develop and maintain efficient workflows for data pipelines, maximizing scalability and adhering to industry best practices.",
+                            "Parse with HL7 and FHIR datasets, enhancing capabilities in managing healthcare data with precision and compliance.",
+                            "Troubleshoot and debug connector issues to ensure seamless data flow and integrity.",
+                            "Develop and execute comprehensive test cases and conduct code reviews to enhance data pipeline reliability.",
+                            "Proficient in documenting data lineage, analysis processes, ingestion plans, and data pipelines for clarity and transparency."
                         ]
                     },
                     {
