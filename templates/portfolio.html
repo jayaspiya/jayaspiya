@@ -12,7 +12,7 @@
     />
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
   </head>
-  <body x-data="App()">
+  <body>
     <!-- Not Required -->
     <!-- <header id="header">
         <div class="header__responsive">
@@ -178,20 +178,20 @@
           </div>
           <div class="contact__connect">
             <h2>Ping Me!</h2>
-            <form x-data="MailApp()">
-                <input type="text" placeholder="Name" name="”name”" readonly />
-                <input type="text" placeholder="Subject" name="subject" readonly />
-                <textarea
-                    cols="10"
-                    rows="5"
-                    placeholder="Ask Queries..."
-                    name="”message”"
-                    readonly
-                ></textarea>
-                <div>
-                    <a href="mailto:jayaspiya52@gmail.com" class="custom_button_hover">Send Mail</a>
-                </div>
-          </form>
+            <form name="contact" method="POST" data-netlify="true">
+                <p>
+                <input placeholder="Name" type="text" id="name" name="name" />
+                </p>
+                <p>
+                <input placeholder="Email" type="text" id="email" name="email" />
+                </p>
+                <p>
+                <textarea placeholder="Ask Queries..." id="message" name="message"></textarea>
+                </p>
+                <p>
+                <button type="submit" class="custom_button_hover">Send</button>
+                </p>
+            </form>
         </div>
       </section>
 
